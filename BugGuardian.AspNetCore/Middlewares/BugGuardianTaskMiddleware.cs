@@ -9,7 +9,6 @@ namespace BugGuardian.AspNetCore.Middlewares
     {
         public BugGuardianTaskMiddleware(RequestDelegate next, IConfiguration configuration) : base(next, configuration) { }
 
-
         public async Task Invoke(HttpContext context)
         {
             try
