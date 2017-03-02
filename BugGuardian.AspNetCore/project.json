@@ -1,0 +1,13 @@
+﻿{
+  "supports": {},
+  "dependencies": {
+    "Microsoft.AspNetCore.Http": "1.1.0",
+    "Microsoft.Extensions.Configuration": "1.0.0",
+    "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
+    "NETStandard.Library": "1.6.1",
+    "DBTek.BugGuardian": "2.0.1"
+  },
+  "frameworks": {
+    "netstandard1.3": {}
+  }
+}
