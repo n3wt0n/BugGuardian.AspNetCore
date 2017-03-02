@@ -16,5 +16,16 @@ namespace BugGuardian.AspNetCore
 
             return builder.UseMiddleware<Middlewares.BugGuardianBugMiddleware>(configuration);
         }
+
+        public static IApplicationBuilder UseBugGuardianTaskExceptionHandler(this IApplicationBuilder builder, IConfiguration configuration)
+        {
+            if (builder == null)
+                throw new ArgumentNullException(nameof(builder));
+
+            if (builder == null)
+                throw new ArgumentNullException(nameof(builder));
+
+            return builder.UseMiddleware<Middlewares.BugGuardianTaskMiddleware>(configuration);
+        }
     }
 }

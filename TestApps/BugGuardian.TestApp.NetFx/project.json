@@ -1,4 +1,4 @@
-﻿{
+{
   "dependencies": {
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
     "Microsoft.AspNetCore.Mvc": "1.0.1",
@@ -26,7 +26,13 @@
   },
 
   "frameworks": {
-    "net461": { }
+    "net461": {
+      "dependencies": {
+        "BugGuardian.AspNetCore": {
+          "target": "project"
+        }
+      }
+    }
   },
 
   "buildOptions": {

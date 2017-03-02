@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using BugGuardian.AspNetCore;
 
 namespace BugGuardian.TestApp.NetFx
 {
@@ -46,6 +47,10 @@ namespace BugGuardian.TestApp.NetFx
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            //Add the UseBugGuardianTaskExceptionHandler middleware to the Http pipeline.  The only middleware components that should be above
+            //this one are Debug exception handlers and logging components.
+            app.UseBugGuardianTaskExceptionHandler(Configuration.GetSection("BugGuardian"));
 
             app.UseStaticFiles();
 
