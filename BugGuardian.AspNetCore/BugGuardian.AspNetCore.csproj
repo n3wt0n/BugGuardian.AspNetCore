@@ -41,7 +41,6 @@
   <ItemGroup>
     <Compile Include="BugGuardianMiddlewareExtensions.cs" />
     <Compile Include="Config\BugGuardianConfiguration.cs" />
-    <Compile Include="Config\BugGuardianMiddlewareOptions.cs" />
     <Compile Include="Extensions\IConfigurationExtensions.cs" />
     <Compile Include="Middlewares\BugGuardianBaseMiddleware.cs" />
     <Compile Include="Middlewares\BugGuardianBugMiddleware.cs" />

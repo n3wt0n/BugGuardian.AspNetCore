@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using BugGuardian.AspNetCore;
 
 namespace BugGuardian.TestApp.NetCore
 {
@@ -37,6 +38,10 @@ namespace BugGuardian.TestApp.NetCore
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            //Add the UseBugGuardianBugExceptionHandler middleware to the Http pipeline.  The only middleware components that should be above
+            //this one are Debug exception handlers and logging components.
+            app.UseBugGuardianBugExceptionHandler(Configuration.GetSection("BugGuardian"));            
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -58,3 +63,4 @@ namespace BugGuardian.TestApp.NetCore
         }
     }
 }
+

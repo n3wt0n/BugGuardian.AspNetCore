@@ -1,16 +1,20 @@
-﻿using BugGuardian.AspNetCore.Config;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
+using System;
 
 namespace BugGuardian.AspNetCore
 {
     public static class BugGuardianMiddlewareExtensions
     {
         public static IApplicationBuilder UseBugGuardianBugExceptionHandler(this IApplicationBuilder builder, IConfiguration configuration)
-            => builder.UseMiddleware<Middlewares.BugGuardianBugMiddleware>(configuration);
+        {
+            if (builder == null)
+                throw new ArgumentNullException(nameof(builder));
 
-        public static IApplicationBuilder UseBugGuardianBugExceptionHandler(this IApplicationBuilder builder, IConfiguration configuration, IOptions<BugGuardianMiddlewareOptions> options)
-            => builder.UseMiddleware<Middlewares.BugGuardianBugMiddleware>(configuration, options);
+            if (builder == null)
+                throw new ArgumentNullException(nameof(builder));
+
+            return builder.UseMiddleware<Middlewares.BugGuardianBugMiddleware>(configuration);
+        }
     }
 }
