@@ -10,6 +10,10 @@ namespace BugGuardian.TestApp.NetCore.Controllers
     {
         public IActionResult Index()
         {
+            int i = 0;
+            int j = 22;
+
+            var result = j / i; //ERROR
             return View();
         }
 

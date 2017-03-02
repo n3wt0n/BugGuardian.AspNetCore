@@ -22,6 +22,8 @@ namespace BugGuardian.AspNetCore.Middlewares
                 {
                     await manager.AddBugAsync(ex);
                 }
+
+                throw; //re-throw the Exception to be used in other middlewares
             }
         }
     }

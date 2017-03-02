@@ -37,11 +37,7 @@ namespace BugGuardian.TestApp.NetCore
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-
-            //Add the UseBugGuardianBugExceptionHandler middleware to the Http pipeline.  The only middleware components that should be above
-            //this one are Debug exception handlers and logging components.
-            app.UseBugGuardianBugExceptionHandler(Configuration.GetSection("BugGuardian"));            
-
+                       
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -51,6 +47,10 @@ namespace BugGuardian.TestApp.NetCore
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            //Add the UseBugGuardianBugExceptionHandler middleware to the Http pipeline.  The only middleware components that should be above
+            //this one are Debug exception handlers and logging components.
+            app.UseBugGuardianBugExceptionHandler(Configuration.GetSection("BugGuardian"));
 
             app.UseStaticFiles();
 
