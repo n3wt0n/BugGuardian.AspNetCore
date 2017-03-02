@@ -50,7 +50,7 @@ namespace BugGuardian.TestApp.NetCore
 
             //Add the UseBugGuardianBugExceptionHandler middleware to the Http pipeline.  The only middleware components that should be above
             //this one are Debug exception handlers and logging components.
-            app.UseBugGuardianBugExceptionHandler(Configuration.GetSection("BugGuardian"));
+            app.UseBugGuardianBugExceptionHandler(Configuration.GetSection("BugGuardian"), new string[]{ "myTag1", "mytag2" });
 
             app.UseStaticFiles();
 

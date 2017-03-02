@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace BugGuardian.AspNetCore.Middlewares
@@ -8,6 +9,8 @@ namespace BugGuardian.AspNetCore.Middlewares
     public class BugGuardianTaskMiddleware : BugGuardianBaseMiddleware
     {
         public BugGuardianTaskMiddleware(RequestDelegate next, IConfiguration configuration) : base(next, configuration) { }
+
+        public BugGuardianTaskMiddleware(RequestDelegate next, IConfiguration configuration, string[] tags) : base(next, configuration, tags) { }
 
         public async Task Invoke(HttpContext context)
         {
@@ -19,7 +22,10 @@ namespace BugGuardian.AspNetCore.Middlewares
             {
                 using (var manager = new DBTek.BugGuardian.BugGuardianManager())
                 {
-                    await manager.AddTaskAsync(ex);
+                    if (_tags != null && _tags.Any())
+                        await manager.AddTaskAsync(ex, tags: _tags);
+                    else
+                        await manager.AddTaskAsync(ex);
                 }
 
                 throw; //re-throw the Exception to be used in other middlewares
