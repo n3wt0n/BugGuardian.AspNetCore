@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "exports": {
+    "BugGuardian.AspNetCore/1.0.0": {
+      "type": "project",
+      "framework": ".NETStandard,Version=v1.3",
+      "compile": {
+        "bin/Debug/BugGuardian.AspNetCore.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/BugGuardian.AspNetCore.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/BugGuardian.AspNetCore.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    }
+  }
+}
