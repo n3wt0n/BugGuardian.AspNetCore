@@ -1,7 +1,7 @@
-﻿using BugGuardian.AspNetCore.Config;
+﻿using DBTek.BugGuardian.AspNetCore.Config;
 using Microsoft.Extensions.Configuration;
 
-namespace BugGuardian.AspNetCore.Extensions
+namespace DBTek.BugGuardian.AspNetCore.Extensions
 {
     internal static class IConfigurationExtensions
     {

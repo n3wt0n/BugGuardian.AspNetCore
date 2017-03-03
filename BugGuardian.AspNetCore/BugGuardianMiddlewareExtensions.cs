@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using System;
 
-namespace BugGuardian.AspNetCore
+namespace DBTek.BugGuardian.AspNetCore
 {
     public static class BugGuardianMiddlewareExtensions
     {

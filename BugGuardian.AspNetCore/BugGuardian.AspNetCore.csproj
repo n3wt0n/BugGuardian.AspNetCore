@@ -8,8 +8,8 @@
     <ProjectGuid>{2BDC5438-762C-45C1-A0F8-29E69E9AF2CA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BugGuardian.AspNetCore</RootNamespace>
-    <AssemblyName>BugGuardian.AspNetCore</AssemblyName>
+    <RootNamespace>DBTek.BugGuardian.AspNetCore</RootNamespace>
+    <AssemblyName>DBTek.BugGuardian.AspNetCore</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -48,6 +48,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if "$(ConfigurationName)" == "Release" (
+start xcopy "DBTek.BugGuardian.AspNetCore.dll" "$(SolutionDir)NuGet\Package\lib" /R /Q /Y
+start xcopy "DBTek.BugGuardian.AspNetCore.xml" "$(SolutionDir)NuGet\Package\lib" /R /Q /Y
+)</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

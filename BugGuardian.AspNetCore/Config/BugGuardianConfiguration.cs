@@ -1,4 +1,4 @@
-﻿namespace BugGuardian.AspNetCore.Config
+﻿namespace DBTek.BugGuardian.AspNetCore.Config
 {
     internal class BugGuardianConfiguration
     {

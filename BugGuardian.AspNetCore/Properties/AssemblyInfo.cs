@@ -4,11 +4,11 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BugGuardian.AspNetCore")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("DBTek.BugGuardian.AspNetCore")]
+[assembly: AssemblyDescription("The official BugGuardian extension for ASP.NET Core")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BugGuardian.AspNetCore")]
+[assembly: AssemblyProduct("DBTek.BugGuardian.AspNetCore")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

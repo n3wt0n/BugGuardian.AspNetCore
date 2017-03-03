@@ -1,8 +1,8 @@
-﻿using BugGuardian.AspNetCore.Extensions;
+﻿using DBTek.BugGuardian.AspNetCore.Extensions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 
-namespace BugGuardian.AspNetCore.Middlewares
+namespace DBTek.BugGuardian.AspNetCore.Middlewares
 {
     public class BugGuardianBaseMiddleware
     {
