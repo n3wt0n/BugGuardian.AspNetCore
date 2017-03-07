@@ -50,8 +50,8 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if "$(ConfigurationName)" == "Release" (
-start xcopy "DBTek.BugGuardian.AspNetCore.dll" "$(SolutionDir)NuGet\Package\lib" /R /Q /Y
-start xcopy "DBTek.BugGuardian.AspNetCore.xml" "$(SolutionDir)NuGet\Package\lib" /R /Q /Y
+start xcopy "DBTek.BugGuardian.AspNetCore.dll" "$(SolutionDir)NuGet\Package\lib\netstandard1.6" /R /Q /Y
+start xcopy "DBTek.BugGuardian.AspNetCore.xml" "$(SolutionDir)NuGet\Package\lib\netstandard1.6" /R /Q /Y
 )</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -61,4 +61,7 @@ start xcopy "DBTek.BugGuardian.AspNetCore.xml" "$(SolutionDir)NuGet\Package\lib"
   <Target Name="AfterBuild">
   </Target>
   -->
+  <PropertyGroup>
+    <NuGetTargetMoniker>.NETStandard,Version=v1.6</NuGetTargetMoniker>
+  </PropertyGroup>
 </Project>

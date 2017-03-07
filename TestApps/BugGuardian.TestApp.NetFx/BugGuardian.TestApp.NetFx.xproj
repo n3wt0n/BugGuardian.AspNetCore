@@ -20,7 +20,7 @@
     <DnxInvisibleContent Include=".bowerrc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\BugGuardian.AspNetCore\BugGuardian.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\BugGuardian.AspNetCore.FullFx\BugGuardian.AspNetCore.FullFx.csproj" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet.Web\Microsoft.DotNet.Web.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>

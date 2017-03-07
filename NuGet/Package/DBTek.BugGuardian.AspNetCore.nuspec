@@ -2,7 +2,7 @@
 <package>
 	<metadata>
 		<id>DBTek.BugGuardian.AspNetCore</id>
-		<version>1.0.0</version>
+		<version>0.1.0</version>
 		<title>BugGuardian.AspNetCore</title>
 		<authors>Davide Benvegnu</authors>    
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -19,12 +19,23 @@ This package works with both .Net Framework and .Net Core.
 		<summary>BugGuardian.AspNetCore is the official ASP.NET Core extension for BugGuardian.</summary>
 		<releaseNotes />
 		<tags>Bug TFS VSTS Team Foundation Server Visual Studio Team Services Unhandled Exceptions Exception Asp.net Core</tags>
-		<dependencies>			
-			<dependency id="DBTek.BugGuardian" version="2.0.1" />
-			<dependency id="Microsoft.AspNetCore.Http" version="1.1.0" />
-			<dependency id="Microsoft.Extensions.Configuration" version="1.1.0" />
-			<dependency id="Microsoft.NETCore.Portable.Compatibility" version="1.0.1" />
-			<dependency id="NETStandard.Library" version="1.6.1" />
+		<dependencies>
+			<group targetFramework="netstandard1.6">		
+				<dependency id="DBTek.BugGuardian" version="2.0.1" />
+				<dependency id="Microsoft.AspNetCore.Http" version="1.0.0" />
+				<dependency id="Microsoft.Extensions.Configuration" version="1.0.0" />
+				<dependency id="Microsoft.NETCore.Portable.Compatibility" version="1.0.1" />
+				<dependency id="NETStandard.Library" version="1.6.1" />
+			</group>
+			<group targetFramework="net46">		
+				<dependency id="DBTek.BugGuardian" version="2.0.1" />
+				<dependency id="Microsoft.AspNetCore.Http" version="1.0.0" />
+				<dependency id="Microsoft.Extensions.Configuration" version="1.0.0" />				
+			</group>
 		</dependencies>
 	</metadata>
+	<files>
+		<file src="lib\net46\DBTek.BugGuardian.AspNetCore.dll" target="lib\net46\DBTek.BugGuardian.AspNetCore.dll" />
+		<file src="lib\netstandard1.6\DBTek.BugGuardian.AspNetCore.dll" target="lib\netstandard1.6\DBTek.BugGuardian.AspNetCore.dll" />
+	</files>
 </package>

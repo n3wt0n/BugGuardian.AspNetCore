@@ -28,9 +28,10 @@
   "frameworks": {
     "net461": {
       "dependencies": {
-        "BugGuardian.AspNetCore": {
+        "BugGuardian.AspNetCore.FullFx": {
           "target": "project"
         }
+
       }
     }
   },
