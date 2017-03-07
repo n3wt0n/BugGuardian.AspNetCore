@@ -14,11 +14,9 @@ Just search *BugGuardian.AspNetCore* in the **Package Manager GUI** or run the f
   
 ```
 Install-Package DBTek.BugGuardian.AspNetCore
-
 ```
   
  
-
 ###Usage###
 
 Refer to the [project documentation](https://github.com/n3wt0n/BugGuardian.AspNetCore/wiki/Home) to find more information about this library.
