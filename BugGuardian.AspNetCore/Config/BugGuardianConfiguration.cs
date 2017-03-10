@@ -8,5 +8,6 @@
         internal string CollectiontName { get; set; }
         internal string ProjectName { get; set; }
         internal bool AvoidMultipleReport { get; set; }
+        internal bool AssignToCurrentIteration { get; set; }
     }
 }

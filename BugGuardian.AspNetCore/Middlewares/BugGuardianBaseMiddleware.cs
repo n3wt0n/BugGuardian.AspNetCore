@@ -23,7 +23,8 @@ namespace DBTek.BugGuardian.AspNetCore.Middlewares
                 bugGuardianConfiguration.Password,
                 bugGuardianConfiguration.CollectiontName,
                 bugGuardianConfiguration.ProjectName,
-                bugGuardianConfiguration.AvoidMultipleReport);
+                bugGuardianConfiguration.AvoidMultipleReport,
+                bugGuardianConfiguration.AssignToCurrentIteration);
         }
     }
 }

@@ -15,7 +15,8 @@ namespace DBTek.BugGuardian.AspNetCore.Extensions
                 Password = configuration["Password"],
                 CollectiontName = configuration["CollectionName"] ?? DefaultCollectionName,
                 ProjectName = configuration["ProjectName"],
-                AvoidMultipleReport = bool.Parse(configuration["AvoidMultipleReport"] ?? "true")
+                AvoidMultipleReport = bool.Parse(configuration["AvoidMultipleReport"] ?? "true"),
+                AssignToCurrentIteration = bool.Parse(configuration["AssignToCurrentIteration"] ?? "true")
             };
     }
 }
