@@ -8,7 +8,7 @@ Easily track you ASP.NET Core exceptions on VSTS and TFS
 It supports projects with ASP.NET Core using both .Net Full Framework and Net Core.
 
 
-###Installation###
+### Installation ###
 
 The **BugGuardian.AspNetCore** library is available on [NuGet](https://www.nuget.org/packages/DBTek.BugGuardian.AspNetCore).
 Just search *BugGuardian.AspNetCore* in the **Package Manager GUI** or run the following command in the **Package Manager Console**:
@@ -18,14 +18,14 @@ Install-Package DBTek.BugGuardian.AspNetCore
 ```
   
  
-###Usage###
+### Usage ###
 
 Refer to the [project documentation](https://github.com/n3wt0n/BugGuardian.AspNetCore/wiki/Home) to find more information about this library.
 
 Refer to the [BugGuardian project documentation](https://github.com/n3wt0n/BugGuardian/wiki/Home) to find examples about that.
 
 
-###Support###
+### Support ###
 
 If you encounter some issues trying this library, please let me know through the [Issues page](https://github.com/n3wt0n/BugGuardian.AspNetCore/issues) and I'll fix the problem as soon as possible!
 
