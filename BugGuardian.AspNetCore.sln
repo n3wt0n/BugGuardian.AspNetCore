@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BugGuardian.TestApp.NetCore
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugGuardian.AspNetCore.FullFx", "BugGuardian.AspNetCore.FullFx\BugGuardian.AspNetCore.FullFx.csproj", "{30A5C915-D4DA-486B-973A-BF2F1DDE4943}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugGuardian.TestApp.NetCore3", "BugGuardian.TestApp.NetCore3\BugGuardian.TestApp.NetCore3.csproj", "{5B5FE1FB-2C29-4779-9642-A638104BD88D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugGuardian.TestApp.NetCore3", "TestApps\BugGuardian.TestApp.NetCore3\BugGuardian.TestApp.NetCore3.csproj", "{5B5FE1FB-2C29-4779-9642-A638104BD88D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
