@@ -15,7 +15,7 @@ It supports projects with ASP.NET Core using both .Net Full Framework and Net Co
 The **BugGuardian.AspNetCore** library is available on [NuGet](https://www.nuget.org/packages/DBTek.BugGuardian.AspNetCore).
 Just search for *BugGuardian.AspNetCore* in the **Package Manager GUI** or run the following command in the **Package Manager Console**:
   
-```Powershell
+```PowerShell
 Install-Package DBTek.BugGuardian.AspNetCore
 ```
 
