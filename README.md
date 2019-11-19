@@ -1,6 +1,8 @@
 # BugGuardian.AspNetCore
 
 ![Build Status](https://dbtek.visualstudio.com/_apis/public/build/definitions/31dcc845-6a11-47d7-90a5-1c340cebf0f1/39/badge)
+[![Release](https://img.shields.io/github/release/n3wt0n/BugGuardian.AspNetCore.svg)](https://github.com/n3wt0n/BugGuardian.AspNetCore/releases/latest)
+[![License](https://img.shields.io/github/license/n3wt0n/BugGuardian.AspNetCore.svg)](https://github.com/n3wt0n/BugGuardian.AspNetCore/blob/master/LICENSE)
 
 ## Easily track you ASP.NET Core exceptions on Azure DevOps and TFS
 
