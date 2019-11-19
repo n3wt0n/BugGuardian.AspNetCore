@@ -4,20 +4,21 @@
 		<id>DBTek.BugGuardian.AspNetCore</id>
 		<version>1.1.0</version>
 		<title>BugGuardian.AspNetCore</title>
-		<authors>Davide Benvegnu</authors>    
+		<authors>Davide Benvegnu</authors>      
+		<owners>Davide Benvegnu</owners> 
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<projectUrl>https://github.com/n3wt0n/BugGuardian.AspNetCore</projectUrl>
-		<licenseUrl>https://github.com/n3wt0n/BugGuardian.AspNetCore/blob/master/LICENSE.md</licenseUrl>
+		<license type="expression">MIT</license>
 		<description>BugGuardian.AspNetCore is the official ASP.NET Core extension for BugGuardian.
 This package works with both .Net Framework and .Net Core.
 		
-BugGuardian is a library, written in C# targeting NetStandard 1.1, that allows to easily create a Bug or Task work item on your Visual Studio Team Services account or on your on-premises Team Foundation Server in the case your application throws an Unhandled Exception. 
+BugGuardian is a library, written in C# and targetting the .NET Standard 1.1, that allows to easily create a Bug or Task work item on your Azure DevOps account or on your on-premises Azure DevOps Server and Team Foundation Server in the case your application throws an Unhandled Exception.
 		
 It can also be invoked manually in try/catch blocks to keep track of handled exceptions.
 		</description>
 		<summary>BugGuardian.AspNetCore is the official ASP.NET Core extension for BugGuardian.</summary>
 		<releaseNotes />
-		<tags>Bug TFS VSTS Team Foundation Server Visual Studio Team Services Unhandled Exceptions Exception Asp.net Core</tags>
+		<tags>Bug TFS AzDO Team Foundation Server Azure DevOps Unhandled Exceptions Exception Asp.net Core</tags>
 		<dependencies>
 			<group targetFramework="netstandard1.6">		
 				<dependency id="DBTek.BugGuardian" version="2.1.0" />
