@@ -27,6 +27,8 @@ Refer to the [project documentation](https://github.com/n3wt0n/BugGuardian.AspNe
 
 Refer to the [BugGuardian project documentation](https://github.com/n3wt0n/BugGuardian/wiki/Home) to find examples about that.
 
+> **WARNING**: From Dec 9, 2019 onwards, Azure DevOps will not support "Alternate Credentials" anymore. Please be sure to use a "Personal Access Token" instead (more info: https://devblogs.microsoft.com/devops/azure-devops-will-no-longer-support-alternate-credentials-authentication/)
+
 ### Support
 
 If you encounter some issues trying this library, please let me know through the [Issues page](https://github.com/n3wt0n/BugGuardian.AspNetCore/issues) and I'll fix the problem as soon as possible!
