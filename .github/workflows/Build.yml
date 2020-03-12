@@ -7,20 +7,24 @@ on:
     branches: [ master ]
 
 jobs:
-  BuildNetCore:
-    name: Build .NET Core 
-    runs-on: [ubuntu-latest]
+  BuildNetStandard:
+    name: Build .NET Standard 
+    runs-on: [windows-latest]
 
     steps:
     - uses: actions/checkout@v2
       
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.101
-      
-    - name: Build .NET Core
-      run: dotnet build --configuration Release BugGuardian.AspNetCore/BugGuardian.AspNetCore.csproj
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.2
+
+    - name: Restore NuGet packages
+      run: nuget restore BugGuardian.AspNetCore/BugGuardian.AspNetCore.csproj
+
+    - name: Build the Solution
+      run: msbuild BugGuardian.AspNetCore/BugGuardian.AspNetCore.csproj /p:Configuration=Release
     
   BuildNetFullFX:
     name: Build .NET Full Framework
@@ -39,5 +43,5 @@ jobs:
       run: nuget restore BugGuardian.AspNetCore.FullFxOnly.sln
 
     - name: Build the Solution
-      run: msbuild BugGuardian.AspNetCore.FullFxOnly.sln
+      run: msbuild BugGuardian.AspNetCore.FullFxOnly.sln /p:Configuration=Release
 
