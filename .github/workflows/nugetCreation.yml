@@ -22,4 +22,6 @@ jobs:
 
     - name: Build the Solution - .NET Standard
       run: msbuild BugGuardian.AspNetCore/BugGuardian.AspNetCore.csproj /p:Configuration=Release
-
+      
+    - name: Create NuGet Package
+      run: /NuGet/CreatePackage.bat
